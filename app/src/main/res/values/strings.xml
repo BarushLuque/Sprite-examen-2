@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Sprite</string>
+    <string name="guardar">Guardar</string>
+    <string name="fecha">Fecha</string>
+    <string name="selectFecha">Seleccione una Fecha</string>
+    <string name="tienda">Tienda</string>
+    <string name="precio">Precio</string>
+    <string name="nombreProducto">Nombre del Producto</string>
+    <string name="verLista">Ver Lista de Compra</string>
+</resources>
