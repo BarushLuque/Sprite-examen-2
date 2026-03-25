@@ -14,6 +14,7 @@ class SpriteDB(
 
     override fun onCreate(db: SQLiteDatabase) {
         try {
+            // Creacion de la tabla gasto
             db.execSQL(
                 "CREATE TABLE Gasto (" +
                         "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
