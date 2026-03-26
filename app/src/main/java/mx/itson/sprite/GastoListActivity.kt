@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.ListView
+import android.widget.TextView
 import mx.itson.sprite.adapters.GastoAdapter
 import mx.itson.sprite.entities.Gasto
 
@@ -16,7 +17,13 @@ class GastoListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_gasto_list)
+
+        val btnRegresar = findViewById<TextView>(R.id.btnRegresar)
+        btnRegresar?.setOnClickListener {
+            finish()
+        }
 
         //Inicializar el Listview
         listGastos = findViewById(R.id.listGastos)
