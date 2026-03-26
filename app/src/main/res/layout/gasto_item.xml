@@ -3,40 +3,46 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/gradient_bg2"
-    android:padding="10dp">
+    android:padding="16dp"
+    android:layout_margin="8dp">
 
     <TextView
-        android:id="@+id/txtProducto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nombreProducto"
-        android:textSize="18sp" />
+    android:id="@+id/txtProducto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/nombreProducto"
+    android:textSize="18sp"
+    android:textColor="#000000"
+    android:textStyle="bold" />
 
     <TextView
         android:id="@+id/txtPrecio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/precio" />
+        android:text="@string/precio"
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/txtTienda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tienda"/>
+        android:text="@string/tienda"
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/txtFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fecha"/>
+        android:text="@string/fecha"
+        android:textColor="#000000" />
 
     <Button
         android:id="@+id/btnEliminar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Eliminar" />
-
+        android:text="@string/btn_delete"
+        android:backgroundTint="#FF0000"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="8dp" />
 
 </LinearLayout>
-

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,34 +7,42 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_bg"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/logoSprite"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
         android:src="@drawable/sprite_logo"
-        android:scaleType="fitCenter"/>
-
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="20dp"/>
 
     <EditText
         android:id="@+id/etProducto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/nombreProducto"/>
+        android:hint="@string/nombreProducto"
+        android:textColor="#000000"
+        android:textColorHint="#555555"/>
 
     <EditText
         android:id="@+id/etPrecio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/precio"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal"
+        android:textColor="#000000"
+        android:textColorHint="#555555"/>
 
     <EditText
         android:id="@+id/etTienda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/tienda"/>
+        android:hint="@string/tienda"
+        android:textColor="#000000"
+        android:textColorHint="#555555"/>
 
     <EditText
         android:id="@+id/etFecha"
@@ -43,18 +50,26 @@
         android:layout_height="wrap_content"
         android:hint="@string/selectFecha"
         android:focusable="false"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:textColor="#000000"
+        android:textColorHint="#555555"/>
 
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/guardar"/>
+        android:text="@string/guardar"
+        android:backgroundTint="#FF0000"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"/>
 
     <Button
         android:id="@+id/btnVerLista"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/verLista"/>
+        android:text="@string/verLista"
+        android:backgroundTint="#FF0000"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="8dp"/>
 
 </LinearLayout>
