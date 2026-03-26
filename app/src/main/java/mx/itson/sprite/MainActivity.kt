@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         btnGuardar = findViewById(R.id.btnGuardar)
         btnVerLista = findViewById(R.id.btnVerLista)
 
-        val opcionesTiendas = arrayOf("Selecciona una tienda...", "Oxo", "Bodega Aurrera", "Sor y ana", "Womor", "Somsclo", "Jomdipo", "Farmacia Guadalajara", "Farmacias Similares", "Abarrotes Ramicavalp", "CANACA", "Cosco", "Cityclob")
+        val opcionesTiendas = arrayOf("Selecciona una tienda...", "Oxxo", "Bodega Aurrera", "Soriana", "Walmart", "Cosco", "Home Depot", "Farmacia Guadalajara", "Farmacias Similares", "Abarrotes Perez", "CANACA", "Sams club")
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, opcionesTiendas)
         spnTienda.adapter = adapter
 
