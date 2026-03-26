@@ -17,13 +17,15 @@ import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.os.VibratorManager
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 
 class MainActivity : AppCompatActivity() {
 
     // Campos de entrada
     lateinit var etProducto: EditText
     lateinit var etPrecio: EditText
-    lateinit var etTienda: EditText
+    lateinit var spnTienda: Spinner
     lateinit var etFecha: EditText
 
     //Botones
@@ -65,10 +67,14 @@ class MainActivity : AppCompatActivity() {
         // Inicialización de los componentes visuales
         etProducto = findViewById(R.id.etProducto)
         etPrecio = findViewById(R.id.etPrecio)
-        etTienda = findViewById(R.id.etTienda)
+        spnTienda = findViewById(R.id.spnTienda)
         etFecha = findViewById(R.id.etFecha)
         btnGuardar = findViewById(R.id.btnGuardar)
         btnVerLista = findViewById(R.id.btnVerLista)
+
+        val opcionesTiendas = arrayOf("Selecciona una tienda...", "Oxo", "Bodega Aurrera", "Sor y ana", "Womor", "Somsclo", "Jomdipo", "Farmacia Guadalajara", "Farmacias Similares", "Abarrotes Ramicavalp", "CANACA", "Cosco", "Cityclob")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, opcionesTiendas)
+        spnTienda.adapter = adapter
 
 
         /**
@@ -103,13 +109,13 @@ class MainActivity : AppCompatActivity() {
 
             val producto = etProducto.text.toString()
             val precioTexto = etPrecio.text.toString()
-            val tienda = etTienda.text.toString()
+            val tienda = spnTienda.selectedItem.toString()
             val fecha = etFecha.text.toString()
 
 
             //Valida que no haya campos vacios y de haberlos le notifica al usuario con
             // un mensaje y vibración.
-            if (producto.isEmpty() || precioTexto.isEmpty() || tienda.isEmpty() || fecha.isEmpty()) {
+            if (producto.isEmpty() || precioTexto.isEmpty() || tienda == "Selecciona una tienda..." || fecha.isEmpty()) {
                 vibrate()
                 Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -131,7 +137,7 @@ class MainActivity : AppCompatActivity() {
             //Limpia los campos
             etProducto.text.clear()
             etPrecio.text.clear()
-            etTienda.text.clear()
+            spnTienda.setSelection(0)
             etFecha.text.clear()
 
             // Vibra y muestra un mensaje notificando al usuario de que
