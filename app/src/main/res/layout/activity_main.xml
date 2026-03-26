@@ -13,7 +13,7 @@
     <ImageView
         android:id="@+id/logoSprite"
         android:layout_width="wrap_content"
-        android:layout_height="122dp"
+        android:layout_height="150dp"
         android:src="@drawable/sprite_logo"
         android:scaleType="fitCenter"/>
 
